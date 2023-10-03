@@ -21,8 +21,6 @@ export default function App() {
   const [isTranscribing, setIsTranscribing] = useState(false)
   const [scribeDownloadItems, setScribeDownloadItems] = useState({})
   const [scribeDownloadProgress, setScribeDownloadProgress] = useState(0)
-  // flag for when webworkers are finished
-  const [isFinished, setIsFinished] = useState(false)
 
   // flag for is there is a any usable audiofile for deciding when to load the file display page
   const isAudio = audioFile || audioStream;
