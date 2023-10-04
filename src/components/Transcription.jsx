@@ -1,6 +1,5 @@
 import React from 'react';
 import TextOutput from './TextOutput';
-import AudioPlayer from './AudioPlayer';
 
 export default function Transcription(props) {
     const { finalText, isTranscribing, isScribeLoading, scribeDownloadProgress, userAudio } = props
