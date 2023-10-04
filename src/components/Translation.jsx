@@ -19,7 +19,7 @@ export default function Translation(props) {
                     </div>
                 ) : (
                     <div className='flex justify-center items-stretch gap-2'>
-                        <select className='outline-none p-1 flex-1 bg-white rounded border border-solid border-transparent hover:border-blue-300 duration-200' value={toLanguage} onChange={(e) => setToLanguage(e.target.value)} name="language selection">
+                        <select className='outline-none p-1 flex-1 bg-white rounded border border-solid border-transparent hover:border-blue-300 duration-200 max-w-[235px] md:max-w-[350px]' value={toLanguage} onChange={(e) => setToLanguage(e.target.value)} name="language selection">
                             <option value={'Select Language'}>Select Language</option>
                             {Object.entries(LANGUAGES).map(([key, value]) => {
                                 return (
@@ -27,7 +27,7 @@ export default function Translation(props) {
                                 )
                             })}
                         </select>
-                        <button className='specialBtn px-3 py-2 text-blue-400 hover:text-blue-700 duration-200 font-medium' onClick={generateTranslation}>Translate</button>
+                        <button className='bg-white px-3 py-2 text-blue-400 hover:text-blue-700 hover:bg-slate-50 duration-200 font-ai font-medium' onClick={generateTranslation}>Translate</button>
                     </div>
                 )
             )}

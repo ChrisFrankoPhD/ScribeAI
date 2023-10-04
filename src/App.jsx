@@ -100,7 +100,7 @@ export default function App() {
     setAudioFile(null)
     setAudioStream(null)
   }
-  // function that takes the uploaded or streamed audio file, and uses the AudioContext module to uncompress/decode it into analsable data
+  // function that takes the uploaded or streamed audio file, and uses the AudioContext module to uncompress/decode it into analisable data
   async function readAudioFrom(audioFile) {
     const samplingRate = 16000
     const audioCxt = new AudioContext({sampleRate: samplingRate})

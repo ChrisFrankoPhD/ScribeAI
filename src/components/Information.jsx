@@ -4,7 +4,8 @@ import Translation from './Translation';
 import { MessageTypes } from './../utils/presets';
 
 export default function Information(props) {
-    const { finalText, isScribeLoading, scribeDownloadProgress, isTranscribing } = props;
+    const { finalText, isScribeLoading, scribeDownloadProgress, isTranscribing, userAudio } = props;
+
     const [isTransLoading, setIsTransLoading] = useState(false)
     const [transDownloadItems, setTransDownloadItems] = useState({})
     const [transDownloadProgress, setTransDownloadProgress] = useState(0)
@@ -96,7 +97,7 @@ export default function Information(props) {
     
 
     return (
-        <main className='flex flex-col flex-1 justify-center text-center p-4 pb-20 gap-2 md:gap-3 w-full max-w-prose mx-auto'>
+        <main className='flex flex-col flex-1 justify-center text-center p-5 gap-2 md:gap-3 w-full max-w-prose mx-auto'>
             <h1 className='flex flex-col md:block text-4xl my-3 sm:text-5xl md:text-6xl'>
                 Your
                 <span className='text-blue-400'>

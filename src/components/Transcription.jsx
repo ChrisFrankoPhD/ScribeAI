@@ -1,8 +1,9 @@
 import React from 'react';
 import TextOutput from './TextOutput';
+import AudioPlayer from './AudioPlayer';
 
 export default function Transcription(props) {
-    const { finalText, isTranscribing, isScribeLoading, scribeDownloadProgress } = props
+    const { finalText, isTranscribing, isScribeLoading, scribeDownloadProgress, userAudio } = props
     
     return (
         <>
@@ -18,11 +19,12 @@ export default function Transcription(props) {
                     </div>
                 ) : (
                     <div className='flex justify-center items-stretch gap-2'>
-                        <button className='flex items-center specialBtn rounded-lg px-3 py-2 text-blue-400 hover:text-blue-700 duration-200 font-medium gap-3'><p>Play Original Audio</p><i className="fa-solid fa-play"></i></button>
+                        <div className='flex items-center specialBtnTrans rounded-lg px-3 py-2 text-blue-400 font-medium gap-3 font-ai'><p className='font-ai'>Transcription Finished</p></div>
                     </div>
                 )
             )}
             <TextOutput key='ScribeText' isLoading={isScribeLoading} displayText={finalText} />
+            <p className="rounded p-4 text-transparent bg-transparent">Warning: The translation model is included to display in-browser Machine Learning capabilities, but is very large (&gt; 400 Mb) and may require minutes to download upon first translation request of session.</p>
         </>
     )
 }
