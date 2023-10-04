@@ -86,8 +86,6 @@ export default function Dashboard(props) {
                 Transcribe 
                 <i className="text-blue-400 fa-solid fa-arrow-right px-2"></i> 
                 Translate
-                <i className="text-blue-400 fa-solid fa-arrow-right px-2"></i>
-                Interpret
             </h3>
             <button className="flex items-center justify-between gap-4 mx-auto w-72 max-w-full my-4 text-lg font-medium specialBtn px-4 py-2 rounded-xl text-blue-400 hover:text-blue-600" onClick={(recordingStatus === 'inactive') ? (
                     startRecording
