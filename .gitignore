@@ -1,5 +1,6 @@
 #Personal
 test_audio
+AudioPlayer.jsx
 # Logs
 logs
 *.log
